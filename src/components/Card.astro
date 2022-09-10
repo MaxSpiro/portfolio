@@ -1,0 +1,26 @@
+---
+const { width, imgSrc, url, title, description, buttonText, widthPercent } =
+  Astro.props;
+---
+
+<div
+  class={`bg-base-200 flex-col h-auto rounded-xl overflow-hidden hover:opacity-60 flex items-center relative group`}
+  style={{ width: widthPercent }}
+>
+  <figure>
+    <img width={width} src={imgSrc} />
+  </figure>
+  <a
+    class="absolute top-1/2 w-2/3 hidden group-hover:block"
+    href={url}
+    target="_blank"
+  >
+    <button class="w-full btn btn-primary">{buttonText}</button>
+  </a>
+  <div class="p-4" style={{ maxWidth: width }}>
+    <h1 class="text-xl">{title}</h1>
+    <p>
+      {description}
+    </p>
+  </div>
+</div>

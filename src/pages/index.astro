@@ -1,0 +1,92 @@
+---
+import Card from "../components/Card.astro";
+---
+
+<html>
+  <head></head>
+  <body class="p-0 m-0">
+    <nav class="navbar rounded">
+      <a class="normal-case text-6xl p-4 bg-base-200 w-full">
+        Projects - made by me
+      </a>
+    </nav>
+    <main>
+      <ul>
+        <li class="m-2 p-2">
+          <h1 class="text-5xl">Made in Advanced Programming 1</h1>
+          <h2 class="text-4xl mb-4">
+            An introductory class to Web Development
+          </h2>
+          <ul class="flex justify-around flex-wrap gap-2">
+            <Card
+              widthPercent="40%"
+              width={800}
+              imgSrc={"/chatroom-t2.png"}
+              url={"https://chatroom-t2.herokuapp.com"}
+              buttonText={"Open on Heroku"}
+              title={"An end-of-trimester group project named Chatroom T2."}
+              description={"Experimented with images, drawing, and learned how to write and host a web server."}
+            />
+            <Card
+              widthPercent="40%"
+              width={800}
+              imgSrc={"/spiris-chats.png"}
+              url={"https://spiris-chats.herokuapp.com"}
+              buttonText={"Open on Heroku"}
+              title={"An end of year email-like chat service project originally written in PHP..."}
+              description={"Which I rewrote in server-side javascript and to which I added a login feature"}
+            />
+          </ul>
+        </li>
+        <li class="m-2 p-2">
+          <h1 class="text-5xl">Personal projects</h1>
+          <h2 class="text-4xl mb-4">An ode to my free time</h2>
+          <ul class="flex justify-around flex-wrap gap-6">
+            <Card
+              widthPercent="40%"
+              width={800}
+              imgSrc={"/scribefps.png"}
+              url={"https://scribefps.netlify.app"}
+              buttonText={"Open on Netlify"}
+              title={"The Scribe official website, which includes a user-friendly admin page where someone with no technical skills can upload issues."}
+              description={"A much-appreciated project by the Scribe team and our advisor, as it allows the website to stay updated after I graduate."}
+            />
+            <Card
+              widthPercent="40%"
+              width={800}
+              imgSrc={"/twitter-bot.png"}
+              url={"https://twitter.com/gothmoneybot"}
+              buttonText={"Open on Twitter"}
+              title={"An automated Twitter bot I created to tweet lyrics every 6 hours from my favorite artists."}
+              description={""}
+            />
+            <Card
+              widthPercent="70%"
+              width={1200}
+              imgSrc={"/my-google-wallet.png"}
+              url={""}
+              buttonText={"Not yet live"}
+              title={"My Google Wallet, a web app that creates a wallet for major blockchains from a user's Google account"}
+              description={"I used the software I wrote for the social wallet but created my own UI and backend."}
+            />
+          </ul>
+        </li>
+        <li class="m-2 p-2">
+          <h1 class="text-5xl">Work Experience</h1>
+          <h2 class="text-4xl mb-4">Defispot</h2>
+          <ul class="flex justify-around flex-wrap gap-2">
+            <Card
+              widthPercent="80%"
+              width={1400}
+              imgSrc={"/defispot.png"}
+              url={"https://app.defispot.com"}
+              buttonText={"Open on app.defispot.com"}
+              title={"A decentralized exchange built on the THORChain protocol."}
+              description={"I was responsible for fixing bugs in the UI and implementing web3auth, a login flow where users can sign in with Google or Facebook and have a wallet instantly created for them. I also brought the mobile app from pure UI to complete functionality with swaps, transfers, and social wallets"}
+            />
+          </ul>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
