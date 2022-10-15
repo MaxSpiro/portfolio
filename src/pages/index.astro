@@ -1,5 +1,6 @@
 ---
 import Card from '../components/Card.astro'
+import { personal, work } from '../projects'
 ---
 
 <html>
@@ -15,56 +16,50 @@ import Card from '../components/Card.astro'
         <li class="m-2 p-2">
           <h1 class="text-4xl">Personal projects</h1>
           <ul class="flex justify-around flex-wrap gap-6 py-8">
-            <Card
-              className="max-w-[600px]"
-              width={800}
-              imgSrc={'https://i.imgur.com/eeMLQ6g.png'}
-              url={'https://scribefps.netlify.app'}
-              buttonText={'Open on Netlify'}
-              title={'The Scribe official website'}
-              description={'Includes a user-friendly admin page and content management system so that the new issues may be uploaded by the editors.'}
-            />
-            <Card
-              className="max-w-[500px]"
-              width={800}
-              imgSrc={'https://i.imgur.com/C982MW1.png'}
-              url={'https://twitter.com/gothmoneybot'}
-              buttonText={'Open on Twitter'}
-              title={'Goth Money & Sad Boys Lyric Bot'}
-              description={'A twitter bot I scheduled to post lyrics from my favorite artists every 6 hours'}
-            />
-            <Card
-              className="max-w-[1000px]"
-              width={1000}
-              imgSrc={'https://i.imgur.com/8d9Giuk.png'}
-              url={''}
-              buttonText={'Not yet live'}
-              title={"My Google Wallet, a web app that uses the Torus network to create private keys from users' Google accounts."}
-              description={'With the private key, my app providers users with addresses and wallets for major blockchains like Ethereum, Cosmos Hub, Bitcoin, Polygon, and more.'}
-            />
-            <Card
-              imgSrc={'/solana.png'}
-              className="max-w-[1000px]"
-              width={1000}
-              buttonText={'Open on Vercel'}
-              title={'Solana Socials, a social app that allows users to connect with Solana web3 wallets as well as the Google wallet created by the Torus network.'}
-              description={'This app uses database storage to store user data, but I hope to migrate to a blockchain solution in the future.'}
-              url={'https://solana-social.vercel.app/'}
-            />
+            {
+              personal.map(
+                ({
+                  imgName,
+                  width,
+                  className,
+                  buttonText,
+                  title,
+                  description,
+                  url,
+                }) => (
+                  <Card
+                    imgSrc={`/${imgName}`}
+                    className={className}
+                    width={width}
+                    buttonText={buttonText}
+                    title={title}
+                    description={description}
+                    url={url}
+                  />
+                ),
+              )
+            }
           </ul>
         </li>
         <li class="m-2 p-2">
           <h1 class="text-4xl">Work Experience</h1>
           <h2 class="text-3xl mb-4">Defispot</h2>
           <ul class="flex justify-around flex-wrap gap-2">
-            <Card
-              width={1400}
-              imgSrc={'https://i.imgur.com/TWRWiM6.png'}
-              url={'https://app.defispot.com'}
-              buttonText={'Open on app.defispot.com'}
-              title={'A decentralized, multichain exchange built on the THORChain protocol.'}
-              description={'I implemented the social login flow and key generation seen in My Google Wallet, worked on the UI/UX of the swap interface, improving asset selection screens and increasing transparency with network/protocol fees, and worked on the mobile app.'}
-            />
+            {
+              work.map(
+                ({ imgName, width, buttonText, title, description, url }) => (
+                  <Card
+                    imgSrc={`/${imgName}`}
+                    className="max-w-[1000px]"
+                    width={width}
+                    buttonText={buttonText}
+                    title={title}
+                    description={description}
+                    url={url}
+                  />
+                ),
+              )
+            }
           </ul>
         </li>
       </ul>
