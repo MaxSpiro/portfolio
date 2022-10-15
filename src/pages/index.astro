@@ -1,88 +1,69 @@
 ---
-import Card from "../components/Card.astro";
+import Card from '../components/Card.astro'
 ---
 
 <html>
   <head></head>
   <body class="p-0 m-0">
     <nav class="navbar rounded">
-      <a class="normal-case text-6xl p-4 bg-base-200 w-full">
+      <a class="normal-case text-4xl md:text-6xl p-4 bg-base-200 w-full">
         Projects - made by me
       </a>
     </nav>
     <main>
       <ul>
         <li class="m-2 p-2">
-          <h1 class="text-5xl">Made in Advanced Programming 1</h1>
-          <h2 class="text-4xl mb-4">
-            An introductory class to Web Development
-          </h2>
-          <ul class="flex justify-around flex-wrap gap-2">
+          <h1 class="text-4xl">Personal projects</h1>
+          <ul class="flex justify-around flex-wrap gap-6 py-8">
             <Card
-              widthPercent="40%"
+              className="max-w-[600px]"
               width={800}
-              imgSrc={"https://i.imgur.com/RVuUGeu.png"}
-              url={"https://chatroom-t2.herokuapp.com"}
-              buttonText={"Open on Heroku"}
-              title={"An end-of-trimester group project named Chatroom T2."}
-              description={"Experimented with images, drawing, and learned how to write and host a web server."}
+              imgSrc={'https://i.imgur.com/eeMLQ6g.png'}
+              url={'https://scribefps.netlify.app'}
+              buttonText={'Open on Netlify'}
+              title={'The Scribe official website'}
+              description={'Includes a user-friendly admin page and content management system so that the new issues may be uploaded by the editors.'}
             />
             <Card
-              widthPercent="40%"
+              className="max-w-[500px]"
               width={800}
-              imgSrc={"https://i.imgur.com/CGOnfxs.png"}
-              url={"https://spiris-chats.herokuapp.com"}
-              buttonText={"Open on Heroku"}
-              title={"An end of year email-like chat service project originally written in PHP..."}
-              description={"Which I rewrote in server-side javascript and to which I added a login feature"}
+              imgSrc={'https://i.imgur.com/C982MW1.png'}
+              url={'https://twitter.com/gothmoneybot'}
+              buttonText={'Open on Twitter'}
+              title={'Goth Money & Sad Boys Lyric Bot'}
+              description={'A twitter bot I scheduled to post lyrics from my favorite artists every 6 hours'}
+            />
+            <Card
+              className="max-w-[1000px]"
+              width={1000}
+              imgSrc={'https://i.imgur.com/8d9Giuk.png'}
+              url={''}
+              buttonText={'Not yet live'}
+              title={"My Google Wallet, a web app that uses the Torus network to create private keys from users' Google accounts."}
+              description={'With the private key, my app providers users with addresses and wallets for major blockchains like Ethereum, Cosmos Hub, Bitcoin, Polygon, and more.'}
+            />
+            <Card
+              imgSrc={'/solana.png'}
+              className="max-w-[1000px]"
+              width={1000}
+              buttonText={'Open on Vercel'}
+              title={'Solana Socials, a social app that allows users to connect with Solana web3 wallets as well as the Google wallet created by the Torus network.'}
+              description={'This app uses database storage to store user data, but I hope to migrate to a blockchain solution in the future.'}
+              url={'https://solana-social.vercel.app/'}
             />
           </ul>
         </li>
         <li class="m-2 p-2">
-          <h1 class="text-5xl">Personal projects</h1>
-          <h2 class="text-4xl mb-4">An ode to my free time</h2>
-          <ul class="flex justify-around flex-wrap gap-6">
-            <Card
-              widthPercent="40%"
-              width={800}
-              imgSrc={"https://i.imgur.com/eeMLQ6g.png"}
-              url={"https://scribefps.netlify.app"}
-              buttonText={"Open on Netlify"}
-              title={"The Scribe official website, which includes a user-friendly admin page where someone with no technical skills can upload issues."}
-              description={"A much-appreciated project by the Scribe team and our advisor, as it allows the website to stay updated after I graduate."}
-            />
-            <Card
-              widthPercent="40%"
-              width={800}
-              imgSrc={"https://i.imgur.com/C982MW1.png"}
-              url={"https://twitter.com/gothmoneybot"}
-              buttonText={"Open on Twitter"}
-              title={"An automated Twitter bot I created to tweet lyrics every 6 hours from my favorite artists."}
-              description={""}
-            />
-            <Card
-              widthPercent="70%"
-              width={1200}
-              imgSrc={"https://i.imgur.com/8d9Giuk.png"}
-              url={""}
-              buttonText={"Not yet live"}
-              title={"My Google Wallet, a web app that creates a wallet for major blockchains from a user's Google account"}
-              description={"I used the software I wrote for the social wallet but created my own UI and backend."}
-            />
-          </ul>
-        </li>
-        <li class="m-2 p-2">
-          <h1 class="text-5xl">Work Experience</h1>
-          <h2 class="text-4xl mb-4">Defispot</h2>
+          <h1 class="text-4xl">Work Experience</h1>
+          <h2 class="text-3xl mb-4">Defispot</h2>
           <ul class="flex justify-around flex-wrap gap-2">
             <Card
-              widthPercent="80%"
               width={1400}
-              imgSrc={"https://i.imgur.com/TWRWiM6.png"}
-              url={"https://app.defispot.com"}
-              buttonText={"Open on app.defispot.com"}
-              title={"A decentralized exchange built on the THORChain protocol."}
-              description={"I was responsible for fixing bugs in the UI and implementing web3auth, a login flow where users can sign in with Google or Facebook and have a wallet instantly created for them. I also brought the mobile app from pure UI to complete functionality with swaps, transfers, and social wallets"}
+              imgSrc={'https://i.imgur.com/TWRWiM6.png'}
+              url={'https://app.defispot.com'}
+              buttonText={'Open on app.defispot.com'}
+              title={'A decentralized, multichain exchange built on the THORChain protocol.'}
+              description={'I implemented the social login flow and key generation seen in My Google Wallet, worked on the UI/UX of the swap interface, improving asset selection screens and increasing transparency with network/protocol fees, and worked on the mobile app.'}
             />
           </ul>
         </li>

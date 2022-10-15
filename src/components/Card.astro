@@ -1,11 +1,10 @@
 ---
-const { width, imgSrc, url, title, description, buttonText, widthPercent } =
-  Astro.props;
+const { width, imgSrc, url, title, description, buttonText, className } =
+  Astro.props
 ---
 
 <div
-  class={`bg-base-200 flex-col h-auto rounded-xl overflow-hidden hover:opacity-60 flex items-center relative group`}
-  style={{ width: widthPercent }}
+  class={`bg-base-200 flex-col h-auto rounded-xl overflow-hidden hover:opacity-60 flex items-center relative group ${className}`}
 >
   <figure>
     <img width={width} src={imgSrc} />
@@ -18,8 +17,8 @@ const { width, imgSrc, url, title, description, buttonText, widthPercent } =
     <button class="w-full btn btn-primary">{buttonText}</button>
   </a>
   <div class="p-4" style={{ maxWidth: width }}>
-    <h1 class="text-xl">{title}</h1>
-    <p>
+    <h1 class="text-3xl">{title}</h1>
+    <p class="text-2xl font-light text-gray-400">
       {description}
     </p>
   </div>
