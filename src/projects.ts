@@ -47,11 +47,11 @@ export const work = [
   {
     width: 1400,
     imgName: 'defispot.png',
-    url: 'https://app.defispot.com',
-    buttonText: 'Open on app.defispot.com',
+    url: 'https://defispot.com',
+    buttonText: 'Open on defispot.com',
     title:
       'A decentralized, multichain exchange built on the THORChain protocol.',
     description:
-      'I implemented the social login flow and key generation seen in My Google Wallet, worked onthe UI/UX of the swap interface, improving asset selection screens and increasing transparency with network/protocol fees, and worked on the mobile app.',
+      'I implemented the social login flow and key generation which allows users to create wallets with their social accounts (Google, Facebook, etc.). I revamped the swap interface, improving asset selection screens and increasing transparency with network/protocol fees, and implemented price-tracking throughout the entire development stack, culminating in a graph where users can view price fluctuations over time.',
   },
 ]
