@@ -7,7 +7,7 @@ export const personal = [
     buttonText: 'Open on Netlify',
     title: 'The Scribe official website',
     description:
-      'Includes a user-friendly admin page and content management system so that the new issues ,may be uploaded by the editors.',
+      'A website I made for my high school journalism club using a content management system where administrators could upload the magazine to be distributed online.',
   },
   {
     className: 'max-w-[500px]',
@@ -29,17 +29,6 @@ export const personal = [
       "My Google Wallet, a web app that uses the Torus network to create private keys from users' Google accounts.",
     description:
       'With the private key, my app providers users with addresses and wallets for major blockchains like Ethereum, Cosmos Hub, Bitcoin, Polygon, and more.',
-  },
-  {
-    className: 'max-w-[1000px]',
-    width: 1000,
-    imgName: 'solana.png',
-    buttonText: 'Not yet live',
-    title:
-      'Solana Socials, a social app that allows users to connect with Solana web3 wallets as well as theGoogle wallet reated by the Torus network.',
-    description:
-      'This app uses database storage to store user data, but I hope to migrate to a blockchain solution in the future.',
-    url: '',
   },
 ]
 
