@@ -34,12 +34,12 @@ export const personal = [
     className: 'max-w-[1000px]',
     width: 1000,
     imgName: 'solana.png',
-    buttonText: 'Open on Vercel',
+    buttonText: 'Not yet live',
     title:
       'Solana Socials, a social app that allows users to connect with Solana web3 wallets as well as theGoogle wallet reated by the Torus network.',
     description:
       'This app uses database storage to store user data, but I hope to migrate to a blockchain solution in the future.',
-    url: 'https://solana-social.vercel.app/',
+    url: '',
   },
 ]
 

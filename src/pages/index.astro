@@ -14,6 +14,27 @@ import { personal, work } from '../projects'
     <main>
       <ul>
         <li class="m-2 p-2">
+          <h1 class="text-4xl">Work Experience</h1>
+          <h2 class="text-3xl mb-4">Defispot</h2>
+          <ul class="flex justify-around flex-wrap gap-2">
+            {
+              work.map(
+                ({ imgName, width, buttonText, title, description, url }) => (
+                  <Card
+                    imgSrc={`/portfolio/${imgName}`}
+                    className="max-w-[1000px]"
+                    width={width}
+                    buttonText={buttonText}
+                    title={title}
+                    description={description}
+                    url={url}
+                  />
+                ),
+              )
+            }
+          </ul>
+        </li>
+        <li class="m-2 p-2">
           <h1 class="text-4xl">Personal projects</h1>
           <ul class="flex justify-around flex-wrap gap-6 py-8">
             {
@@ -30,27 +51,6 @@ import { personal, work } from '../projects'
                   <Card
                     imgSrc={`/portfolio/${imgName}`}
                     className={className}
-                    width={width}
-                    buttonText={buttonText}
-                    title={title}
-                    description={description}
-                    url={url}
-                  />
-                ),
-              )
-            }
-          </ul>
-        </li>
-        <li class="m-2 p-2">
-          <h1 class="text-4xl">Work Experience</h1>
-          <h2 class="text-3xl mb-4">Defispot</h2>
-          <ul class="flex justify-around flex-wrap gap-2">
-            {
-              work.map(
-                ({ imgName, width, buttonText, title, description, url }) => (
-                  <Card
-                    imgSrc={`/portfolio/${imgName}`}
-                    className="max-w-[1000px]"
                     width={width}
                     buttonText={buttonText}
                     title={title}
